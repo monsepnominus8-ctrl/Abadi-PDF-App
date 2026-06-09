@@ -262,18 +262,15 @@
 
     <script>
         function downloadApp() {
-            // Ganti link ini dengan link download yang sebenarnya nanti
+            // Link Google Drive direct download (sudah diupdate oleh Grok)
+            const downloadUrl = 'https://drive.google.com/uc?export=download&id=1b5kysaYSpZvy2N8OfE395MzKPa8LN6QQ';
+            
             const link = document.createElement('a');
-            link.href = '#'; // <-- GANTI DENGAN LINK DOWNLOAD .EXE KAMU
+            link.href = downloadUrl;
             link.download = 'AbadiPDF_v1.2.exe';
-            
-            // Untuk sementara tampilkan alert (nanti diganti dengan link asli)
-            alert('File akan segera diunduh...\n\nCatatan: Ganti link download di file index.html dengan link Google Drive / GitHub Releases yang sebenarnya.');
-            
-            // Uncomment baris di bawah ini setelah kamu punya link download asli
-            // document.body.appendChild(link);
-            // link.click();
-            // document.body.removeChild(link);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
         
         // Tailwind script
