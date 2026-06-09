@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abadi PDF • Download</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@600&amp;display=swap');
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .title-font {
+            font-family: 'Poppins', system_ui, sans-serif;
+            font-weight: 600;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+        }
+
+        .download-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 15px -3px rgb(220 38 38 / 0.3), 0 4px 6px -4px rgb(220 38 38 / 0.3);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 25px -5px rgb(220 38 38 / 0.4), 0 8px 10px -6px rgb(220 38 38 / 0.4);
+        }
+
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .section-header {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(to right, #DC2626, transparent);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white">
+    <!-- Navbar -->
+    <nav class="border-b border-zinc-800 bg-zinc-900/80 backdrop-blur-lg sticky top-0 z-50">
+        <div class="max-w-screen-xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-10 h-10 bg-red-600 rounded-2xl flex items-center justify-center">
+                    <i class="fa-solid fa-file-pdf text-3xl text-white"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-3xl tracking-tighter">Abadi</span>
+                    <span class="font-bold text-3xl tracking-tighter text-red-500">PDF</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-x-4">
+                <div class="px-4 py-1.5 bg-zinc-900 border border-zinc-700 rounded-3xl text-sm flex items-center gap-x-2">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-emerald-400 text-xs font-medium">v1.2 • Stable</span>
+                </div>
+                <a href="#" class="text-sm px-5 py-2 hover:bg-zinc-800 transition-colors rounded-3xl border border-zinc-700 flex items-center gap-x-2">
+                    <i class="fa-brands fa-github"></i>
+                    <span class="hidden sm:inline">GitHub</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="max-w-screen-xl mx-auto px-6 pt-16 pb-12">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left Content -->
+            <div>
+                <div class="inline-flex items-center gap-x-2 bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-3xl mb-6">
+                    <span class="text-red-500"><i class="fa-solid fa-industry"></i></span>
+                    <span class="text-sm font-medium text-zinc-400">PT. Abadi Jaya Laxmindo</span>
+                </div>
+                
+                <h1 class="text-6xl lg:text-7xl font-bold tracking-tighter leading-none mb-4">
+                    Abadi PDF<br>
+                    <span class="text-red-500">v1.2</span>
+                </h1>
+                
+                <p class="text-xl text-zinc-400 max-w-md mb-8">
+                    Aplikasi desktop untuk mengelola Slip Gaji karyawan. 
+                    Batch Lock, Merge, Split, Rename otomatis, dan kirim email massal.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <!-- Main Download Button -->
+                    <a href="#" 
+                       onclick="downloadApp()"
+                       class="download-btn group flex-1 sm:flex-none inline-flex items-center justify-center gap-x-3 bg-red-600 hover:bg-red-500 active:bg-red-700 transition-all px-8 h-16 rounded-3xl font-semibold text-lg shadow-xl">
+                        <i class="fa-solid fa-download text-xl group-active:scale-90 transition-transform"></i>
+                        <span>Download untuk Windows</span>
+                    </a>
+                    
+                    <a href="#" 
+                       class="flex-1 sm:flex-none inline-flex items-center justify-center gap-x-3 border border-zinc-700 hover:bg-zinc-900 transition-all px-8 h-16 rounded-3xl font-medium text-lg">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Petunjuk Penggunaan</span>
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-x-4 mt-6 text-sm text-zinc-500">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-check text-emerald-400 mr-2"></i>
+                        <span>Windows 10/11</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-check text-emerald-400 mr-2"></i>
+                        <span>~120 MB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Preview Card -->
+            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 shadow-2xl">
+                <div class="flex items-center justify-between mb-6">
+                    <div>
+                        <div class="text-sm text-zinc-400">Versi Terbaru</div>
+                        <div class="text-3xl font-bold tracking-tight">v1.2</div>
+                    </div>
+                    <div class="px-4 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-bold tracking-[2px] rounded-3xl flex items-center h-fit">
+                        STABLE
+                    </div>
+                </div>
+                
+                <div class="space-y-4 text-sm">
+                    <div class="flex justify-between py-3 border-b border-zinc-800">
+                        <span class="text-zinc-400">Tanggal Rilis</span>
+                        <span class="font-medium">9 Juni 2026</span>
+                    </div>
+                    <div class="flex justify-between py-3 border-b border-zinc-800">
+                        <span class="text-zinc-400">Ukuran File</span>
+                        <span class="font-medium">~120 MB</span>
+                    </div>
+                    <div class="flex justify-between py-3">
+                        <span class="text-zinc-400">Platform</span>
+                        <span class="font-medium">Windows 64-bit</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="max-w-screen-xl mx-auto px-6 pb-20">
+        <div class="text-center mb-10">
+            <h2 class="text-4xl font-bold tracking-tight">Fitur Utama</h2>
+            <p class="text-zinc-400 mt-2">Semua yang kamu butuhkan untuk mengelola payslip dalam satu aplikasi</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-5">
+            <!-- Feature 1 -->
+            <div class="feature-card bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                <div class="w-12 h-12 bg-red-600/10 text-red-500 flex items-center justify-center rounded-2xl mb-5">
+                    <i class="fa-solid fa-lock text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Batch Lock PDF</h3>
+                <p class="text-zinc-400 text-sm">Kunci ratusan PDF sekaligus menggunakan password dari Excel (NIK + Tanggal Lahir)</p>
+            </div>
+            
+            <div class="feature-card bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                <div class="w-12 h-12 bg-red-600/10 text-red-500 flex items-center justify-center rounded-2xl mb-5">
+                    <i class="fa-solid fa-object-group text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Merge PDF</h3>
+                <p class="text-zinc-400 text-sm">Gabungkan beberapa file PDF menjadi satu dokumen dengan mudah</p>
+            </div>
+            
+            <div class="feature-card bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                <div class="w-12 h-12 bg-red-600/10 text-red-500 flex items-center justify-center rounded-2xl mb-5">
+                    <i class="fa-solid fa-scissors text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Split PDF (Pair Mode)</h3>
+                <p class="text-zinc-400 text-sm">Pisahkan halaman PDF menjadi pasangan (contoh: slip depan-belakang)</p>
+            </div>
+            
+            <div class="feature-card bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                <div class="w-12 h-12 bg-red-600/10 text-red-500 flex items-center justify-center rounded-2xl mb-5">
+                    <i class="fa-solid fa-magic text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Auto Rename Slip</h3>
+                <p class="text-zinc-400 text-sm">Otomatis rename file slip gaji berdasarkan ID &amp; Nama karyawan dari dalam PDF</p>
+            </div>
+            
+            <div class="feature-card bg-zinc-900 border border-zinc-800 rounded-3xl p-6">
+                <div class="w-12 h-12 bg-red-600/10 text-red-500 flex items-center justify-center rounded-2xl mb-5">
+                    <i class="fa-solid fa-envelope text-3xl"></i>
+                </div>
+                <h3 class="font-semibold text-xl mb-2">Send Email Massal</h3>
+                <p class="text-zinc-400 text-sm">Kirim payslip ke seluruh karyawan sekaligus via Gmail dengan password otomatis</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- System Requirements & Notes -->
+    <div class="max-w-screen-xl mx-auto px-6 pb-16">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 md:p-10">
+            <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+                <div>
+                    <h3 class="font-semibold text-xl mb-4 flex items-center gap-x-2">
+                        <i class="fa-solid fa-desktop text-red-500"></i> 
+                        <span>Persyaratan Sistem</span>
+                    </h3>
+                    <ul class="space-y-3 text-sm text-zinc-300">
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Windows 10 atau Windows 11 (64-bit)</li>
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Minimal 4 GB RAM (8 GB direkomendasikan)</li>
+                        <li class="flex items-start gap-x-3"><i class="fa-solid fa-check text-emerald-400 mt-1"></i> Koneksi internet (hanya untuk fitur kirim email)</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold text-xl mb-4 flex items-center gap-x-2">
+                        <i class="fa-solid fa-shield-halved text-red-500"></i> 
+                        <span>Catatan Penting</span>
+                    </h3>
+                    <div class="text-sm text-zinc-400 space-y-2.5">
+                        <p>Windows Defender mungkin menandai file ini sebagai virus (false positive). Silakan klik <strong>"Run anyway"</strong> atau tambahkan ke exception.</p>
+                        <p>Login default tersedia di dalam aplikasi (hubungi admin untuk akun baru).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-zinc-800 bg-zinc-900">
+        <div class="max-w-screen-xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-y-4 text-sm text-zinc-500">
+            <div>
+                © 2026 PT. Abadi Jaya Laxmindo. All rights reserved.
+            </div>
+            <div class="flex items-center gap-x-6">
+                <a href="#" class="hover:text-white transition-colors">Hubungi IT</a>
+                <a href="#" class="hover:text-white transition-colors">Changelog</a>
+                <a href="#" class="hover:text-white transition-colors">Panduan Penggunaan</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function downloadApp() {
+            // Ganti link ini dengan link download yang sebenarnya nanti
+            const link = document.createElement('a');
+            link.href = '#'; // <-- GANTI DENGAN LINK DOWNLOAD .EXE KAMU
+            link.download = 'AbadiPDF_v1.2.exe';
+            
+            // Untuk sementara tampilkan alert (nanti diganti dengan link asli)
+            alert('File akan segera diunduh...\n\nCatatan: Ganti link download di file index.html dengan link Google Drive / GitHub Releases yang sebenarnya.');
+            
+            // Uncomment baris di bawah ini setelah kamu punya link download asli
+            // document.body.appendChild(link);
+            // link.click();
+            // document.body.removeChild(link);
+        }
+        
+        // Tailwind script
+        function initializeTailwind() {
+            console.log('%c[Abadi PDF] Download page initialized', 'color:#64748b');
+        }
+        
+        window.onload = initializeTailwind;
+    </script>
+</body>
+</html>
